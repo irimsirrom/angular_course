@@ -17,7 +17,7 @@ function LunchCheckerController($scope){
             $scope.message = "Please enter data";
         }
 
-        if($scope.itemCount <= 3 && $scope.itemCount != 0){
+        if($scope.itemCount =< 3 && $scope.itemCount != 0){
             $scope.message = "Enjoy";
         }
 
