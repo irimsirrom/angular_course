@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Phonebook App</title>
+  </head>
+  <body ng-app="PhoneBookApp">
+
+    <div class="container">
+      <ul ng-controller="PhoneBookCardController as phoneCard">
+        <div class="row">
+          <div class="col-xs-6 col-md-3" ng-repeat="item in phoneCard.listings">
+            <li class="thumbnail">
+              <h1>{{item.gemach}}</h1>
+              <h2>{{item.contact}}</h2>
+              <p>{{item.additional_info}}</p>
+              <span class="label label-default">{{item.category}}</span>
+            </li>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </body>
+</html>
